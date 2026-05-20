@@ -1,0 +1,11 @@
+{
+  "default": true,
+  "MD013": false,
+  "MD024": false,
+  "MD033": false,
+  "MD041": false,
+  "line-length": false,
+  "no-trailing-spaces": true,
+  "single-title": false,
+  "ul-indent": { "indent": 2 }
+}
