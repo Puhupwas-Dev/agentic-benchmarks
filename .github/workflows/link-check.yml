@@ -1,0 +1,18 @@
+name: Link Checker
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'   # Run weekly on Sunday
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links in README
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          config-file: .markdown-link-check.json
+          folder-path: ./
+          file-path: README.md
